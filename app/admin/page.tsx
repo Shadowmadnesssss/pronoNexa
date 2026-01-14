@@ -143,7 +143,7 @@ export default function AdminPage() {
               <button
                 type="button"
                 onClick={addPlayer}
-                className="text-sm text-indigo-600 hover:text-indigo-700"
+                className="text-sm text-purple-600 hover:text-purple-700"
               >
                 + Ajouter un joueur
               </button>
@@ -195,7 +195,7 @@ export default function AdminPage() {
           <button
             type="submit"
             disabled={loading}
-            className="w-full bg-indigo-600 text-white py-2 px-4 rounded-md hover:bg-indigo-700 disabled:opacity-50 transition-colors"
+            className="w-full bg-purple-600 text-white py-2 px-4 rounded-md hover:bg-purple-700 disabled:opacity-50 transition-colors"
           >
             {loading ? 'Création en cours...' : 'Créer le match'}
           </button>

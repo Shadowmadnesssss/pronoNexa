@@ -312,15 +312,15 @@ function MatchCard({
       </div>
 
       {prediction && (
-        <div className="bg-indigo-50 border border-indigo-200 rounded-md p-4 mb-4">
-          <p className="font-semibold text-indigo-800 mb-2">Votre pronostic :</p>
+        <div className="bg-purple-50 border border-purple-200 rounded-md p-4 mb-4">
+          <p className="font-semibold text-purple-800 mb-2">Votre pronostic :</p>
           <p>
             Score : {prediction.exactScore.teamA} - {prediction.exactScore.teamB}
           </p>
           <p>Meilleur buteur : {prediction.bestScorer}</p>
           <p>Résultat : {prediction.result === 'A' ? 'Victoire ' + match.teamA : prediction.result === 'B' ? 'Victoire ' + match.teamB : 'Match nul'}</p>
           {match.isFinished && (
-            <p className="mt-2 font-bold text-indigo-600">
+            <p className="mt-2 font-bold text-purple-600">
               Points obtenus : {prediction.points}
             </p>
           )}
@@ -330,7 +330,7 @@ function MatchCard({
       {canPredict && !showForm && (
         <button
           onClick={() => setShowForm(true)}
-          className="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition-colors"
+          className="bg-purple-600 text-white px-4 py-2 rounded-md hover:bg-purple-700 transition-colors"
         >
           Faire un pronostic
         </button>
@@ -374,7 +374,7 @@ function MatchCard({
             <select
               value={formData.result}
               onChange={(e) => setFormData({ ...formData, result: e.target.value as 'A' | 'B' | 'DRAW' })}
-              className="w-full px-3 py-2 border border-gray-300 rounded-md bg-indigo-50 font-medium"
+              className="w-full px-3 py-2 border border-gray-300 rounded-md bg-purple-50 font-medium"
               required
             >
               <option value="">
@@ -428,7 +428,7 @@ function MatchCard({
             <button
               type="submit"
               disabled={submitting}
-              className="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 disabled:opacity-50 transition-colors"
+              className="bg-purple-600 text-white px-4 py-2 rounded-md hover:bg-purple-700 disabled:opacity-50 transition-colors"
             >
               {submitting ? 'Envoi...' : 'Valider'}
             </button>

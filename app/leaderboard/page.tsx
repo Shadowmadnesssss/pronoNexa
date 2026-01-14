@@ -78,7 +78,7 @@ export default function LeaderboardPage() {
       ) : (
         <div className="bg-white rounded-lg shadow-md overflow-hidden">
           <table className="min-w-full divide-y divide-gray-200">
-            <thead className="bg-indigo-50">
+            <thead className="bg-purple-50">
               <tr>
                 <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                   Rang
@@ -95,7 +95,7 @@ export default function LeaderboardPage() {
               {leaderboard.map((entry) => (
                 <tr
                   key={entry.id}
-                  className={entry.rank <= 3 ? 'bg-yellow-50' : ''}
+                  className={entry.rank <= 3 ? 'bg-purple-50' : ''}
                 >
                   <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
                     {getRankEmoji(entry.rank)}
@@ -103,7 +103,7 @@ export default function LeaderboardPage() {
                   <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-700">
                     {entry.username}
                   </td>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm font-bold text-indigo-600">
+                  <td className="px-6 py-4 whitespace-nowrap text-sm font-bold text-purple-600">
                     {entry.totalPoints} {entry.totalPoints === 1 ? 'point' : 'points'}
                   </td>
                 </tr>
